@@ -3276,7 +3276,7 @@ int id btn_add_images 0x7f080074
 int id btn_eliminar 0x7f080075
 int id btn_get_location 0x7f080076
 int id btn_refresh 0x7f080077
-int id btn_wsp 0x7f080078
+int id btn_tel 0x7f08021e
 int id buttonPanel 0x7f080079
 int id cache_measures 0x7f08007a
 int id callMeasure 0x7f08007b
@@ -3510,6 +3510,7 @@ int id north 0x7f08015e
 int id notification_background 0x7f08015f
 int id notification_main_column 0x7f080160
 int id notification_main_column_container 0x7f080161
+int id numeroContacto 0x7f08021d
 int id off 0x7f080162
 int id on 0x7f080163
 int id onInterceptTouchReturnSwipe 0x7f080164

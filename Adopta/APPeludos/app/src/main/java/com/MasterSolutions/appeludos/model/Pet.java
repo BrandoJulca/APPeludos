@@ -11,12 +11,14 @@ public class Pet {
     private String carácter;
     private String ubicacion;
     private String imagen;
+    private String numeroContacto; // Nuevo campo
 
+    // Constructor vacío requerido por Firebase
     public Pet() {
-        // Constructor vacío requerido por Firebase
     }
 
-    public Pet(String nombre, String especie, String edad, String tamaño, String peso, String carácter, String ubicacion, String imagen) {
+    // Constructor con todos los campos
+    public Pet(String nombre, String especie, String edad, String tamaño, String peso, String carácter, String ubicacion, String imagen, String numeroContacto) {
         this.nombre = nombre;
         this.especie = especie;
         this.edad = edad;
@@ -25,6 +27,7 @@ public class Pet {
         this.carácter = carácter;
         this.ubicacion = ubicacion;
         this.imagen = imagen;
+        this.numeroContacto = numeroContacto;
     }
 
     public String getNombre() {
@@ -103,5 +106,15 @@ public class Pet {
     @PropertyName("imagen")
     public void setImagen(String imagen) {
         this.imagen = imagen;
+    }
+
+    @PropertyName("numero_contacto")
+    public String getNumeroContacto() {
+        return numeroContacto;
+    }
+
+    @PropertyName("numero_contacto")
+    public void setNumeroContacto(String numeroContacto) {
+        this.numeroContacto = numeroContacto;
     }
 }

@@ -51,11 +51,11 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/btn_wsp"
+                    android:id="@+id/btn_tel"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="8dp"
-                    android:contentDescription="WhatsApp"
+                    android:contentDescription="Tel"
                     android:src="@android:drawable/stat_notify_chat"
                     app:tint="@color/green_pet" />
 

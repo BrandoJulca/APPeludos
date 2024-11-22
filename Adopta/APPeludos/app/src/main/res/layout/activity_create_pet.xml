@@ -57,7 +57,7 @@
             <ImageView
                 android:id="@+id/image1"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="100dp"
                 android:layout_marginTop="8dp"
                 android:scaleType="centerCrop"
                 android:background="@android:color/darker_gray"
@@ -155,8 +155,18 @@
                     android:src="@android:drawable/ic_menu_mylocation"
                     android:contentDescription="Obtener ubicación"
                     android:scaleType="centerInside"
-                    android:tint="@color/green_pet" />
+                    app:tint="@color/green_pet" />
             </LinearLayout>
+
+            <EditText
+                android:id="@+id/numeroContacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Número de contacto (999888777)"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp" />
+
 
             <!-- Botón Agregar -->
             <androidx.appcompat.widget.AppCompatButton

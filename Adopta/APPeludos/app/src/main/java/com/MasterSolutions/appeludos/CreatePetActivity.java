@@ -3,7 +3,6 @@ package com.MasterSolutions.appeludos;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -14,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,7 +33,7 @@ public class CreatePetActivity extends AppCompatActivity {
     private static final int PICK_IMAGE_REQUEST = 1;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 100;
 
-    private EditText nombre, edad, peso, ubicacion;
+    private EditText nombre, edad, peso, ubicacion, numeroContacto;
     private Spinner especieChooser, edadUnidadChooser, tamañoChooser, pesoUnidadChooser, carácterChooser;
     private ImageView imageView;
     private Button btnAddImage, btnAdd;
@@ -49,7 +47,6 @@ public class CreatePetActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_create_pet);
 
         // Configurar Toolbar
@@ -69,6 +66,7 @@ public class CreatePetActivity extends AppCompatActivity {
         edad = findViewById(R.id.Edad);
         peso = findViewById(R.id.Peso);
         ubicacion = findViewById(R.id.Ubicación);
+        numeroContacto = findViewById(R.id.numeroContacto); // Nuevo campo
         especieChooser = findViewById(R.id.EspecieChooser);
         edadUnidadChooser = findViewById(R.id.EdadUnidadChooser);
         tamañoChooser = findViewById(R.id.TamañoChooser);
@@ -89,7 +87,7 @@ public class CreatePetActivity extends AppCompatActivity {
 
         btnAdd.setOnClickListener(v -> {
             if (validateInputs()) {
-                savePetData();
+                savePetData(numeroContacto.getText().toString().trim()); // Pasar número de contacto
             }
         });
     }
@@ -137,7 +135,7 @@ public class CreatePetActivity extends AppCompatActivity {
 
         fusedLocationProviderClient.getLastLocation().addOnSuccessListener(location -> {
             if (location != null) {
-                ubicacion.setText("Perú, Lima, Callao"); // Aquí puedes integrar geocodificación inversa si lo deseas
+                ubicacion.setText("Perú, Lima, Callao"); // Simulado
             } else {
                 Toast.makeText(this, "No se pudo obtener la ubicación. Ingresa manualmente.", Toast.LENGTH_SHORT).show();
             }
@@ -176,7 +174,8 @@ public class CreatePetActivity extends AppCompatActivity {
 
     private boolean validateInputs() {
         if (nombre.getText().toString().trim().isEmpty() || edad.getText().toString().trim().isEmpty() ||
-                peso.getText().toString().trim().isEmpty() || ubicacion.getText().toString().trim().isEmpty()) {
+                peso.getText().toString().trim().isEmpty() || ubicacion.getText().toString().trim().isEmpty() ||
+                numeroContacto.getText().toString().trim().isEmpty()) {
             Toast.makeText(this, "Por favor, completa todos los campos.", Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -187,7 +186,7 @@ public class CreatePetActivity extends AppCompatActivity {
         return true;
     }
 
-    private void savePetData() {
+    private void savePetData(String numeroContacto) {
         String imageName = "images/" + System.currentTimeMillis() + ".jpg";
         StorageReference imageRef = storageReference.child(imageName);
 
@@ -204,6 +203,7 @@ public class CreatePetActivity extends AppCompatActivity {
                     petData.put("carácter", carácterChooser.getSelectedItem().toString());
                     petData.put("ubicación", ubicacion.getText().toString().trim());
                     petData.put("imagen", imageUrl);
+                    petData.put("numero_contacto", numeroContacto); // Guardar número de contacto
 
                     firestore.collection("pet")
                             .add(petData)

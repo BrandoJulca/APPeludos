@@ -26,11 +26,12 @@ id btn_add_images
 id btn_eliminar
 id btn_get_location
 id btn_refresh
-id btn_wsp
+id btn_tel
 id historia
 id image1
 id linearLayout
 id main
+id numeroContacto
 id photo
 id recyclerViewSingle
 id toolbar
