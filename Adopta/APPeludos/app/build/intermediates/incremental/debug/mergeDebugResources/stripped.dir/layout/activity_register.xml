@@ -1,27 +1,137 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    tools:context=".RegisterActivity">
 
-    <EditText
-        android:id="@+id/etEmail"
+    <!-- Imagen de fondo -->
+    <ImageView
+        android:id="@+id/backgroundImage"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Correo electrónico"
-        android:inputType="textEmailAddress" />
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/perros"
+        android:contentDescription="@string/app_name" />
 
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
+    <!-- Título de la aplicación -->
+    <TextView
+        android:id="@+id/TitleApp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Contraseña"
-        android:inputType="textPassword" />
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:padding="5dp"
+        android:text="@string/app_name"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="10" />
 
-    <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="match_parent"
+    <!-- Imagen del usuario -->
+    <ImageView
+        android:id="@+id/userImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/TitleApp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        android:src="?android:attr/fingerprintAuthDrawable"
+        android:contentDescription="Imagen de usuario"
+        app:tint="@color/blanco" />
+
+    <!-- Contenedor de registro -->
+    <LinearLayout
+        android:layout_width="368dp"
         android:layout_height="wrap_content"
-        android:text="Registrarse" />
-</LinearLayout>
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/userImage"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@android:color/white"
+        android:elevation="10dp">
+
+        <!-- Campo de E-mail -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_dialog_email"
+                app:tint="@color/green_pet" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/transparent"
+                android:hint="Correo electrónico"
+                android:inputType="textEmailAddress" />
+        </LinearLayout>
+
+        <!-- Línea debajo del campo de E-mail -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+        <!-- Campo de contraseña -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_lock_idle_lock"
+                app:tint="@color/green_pet" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/transparent"
+                android:hint="Contraseña"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <!-- Línea debajo del campo de contraseña -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+        <!-- Botón de registro -->
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/green_pet"
+            android:text="Registrarse"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</RelativeLayout>
