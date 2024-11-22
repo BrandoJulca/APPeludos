@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.APPeludos" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button</item> <!-- Fondo verde -->
+        <item name="android:textColor">@color/blanco</item> <!-- Texto blanco -->
+        <item name="android:textSize">18sp</item> <!-- Tamaño del texto -->
+        <item name="android:padding">12dp</item> <!-- Espaciado interno -->
+    </style>
+
+    <style name="WhiteBox" parent="">
+        <item name="android:background">@color/blanco</item> <!-- Fondo verde -->
+    </style>
+
+    <style name="BlackBox" parent="">
+        <item name="android:background">@color/negro</item> <!-- Fondo verde -->
+    </style>
+
+    <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textColor">@color/green_pet</item>
+    </style>
+
+    <style name="Theme.APPeludos" parent="Base.Theme.APPeludos" />
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1024603741541",
+    "project_id": "appeludos-16bb3",
+    "storage_bucket": "appeludos-16bb3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024603741541:android:a54c313f86d8d430b2158c",
+        "android_client_info": {
+          "package_name": "com.MasterSolutions.appeludos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMDzJc7ZHo85NZnTKjEXYQ0H6ImjabyeU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
