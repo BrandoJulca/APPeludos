@@ -10,6 +10,13 @@
         <item name="android:padding">12dp</item> <!-- Espaciado interno -->
     </style>
 
+    <style name="ButtonStyleClose" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/buttonclose</item> <!-- Fondo verde -->
+        <item name="android:textColor">@color/blanco</item> <!-- Texto blanco -->
+        <item name="android:textSize">18sp</item> <!-- Tamaño del texto -->
+        <item name="android:padding">12dp</item> <!-- Espaciado interno -->
+    </style>
+
     <style name="WhiteBox" parent="">
         <item name="android:background">@color/blanco</item> <!-- Fondo verde -->
     </style>

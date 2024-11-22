@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.MasterSolutions.appeludos.app-mergeDebugResources-39:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
+            "outputFile": "com.MasterSolutions.appeludos.app-mergeDebugResources-47:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Brando\\.gradle\\caches\\transforms-4\\8e2cf32f15cd9accba320fc495bc44c1\\transformed\\material-1.12.0\\res\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
+                    "source": "C:\\Users\\Brando\\.gradle\\caches\\transforms-4\\0a43c942fb7d12e0b9cf36ac2896879d\\transformed\\material-1.12.0\\res\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

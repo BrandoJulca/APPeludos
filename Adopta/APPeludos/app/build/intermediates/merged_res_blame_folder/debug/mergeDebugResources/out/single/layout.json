@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.MasterSolutions.appeludos.app-mergeDebugResources-48:/layout/activity_login.xml",
+        "source": "com.MasterSolutions.appeludos.app-main-51:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.MasterSolutions.appeludos.app-mergeDebugResources-48:/layout/view_pet_single.xml",
+        "source": "com.MasterSolutions.appeludos.app-main-51:/layout/view_pet_single.xml"
+    },
+    {
+        "merged": "com.MasterSolutions.appeludos.app-mergeDebugResources-48:/layout/activity_main.xml",
+        "source": "com.MasterSolutions.appeludos.app-main-51:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.MasterSolutions.appeludos.app-mergeDebugResources-48:/layout/activity_register.xml",
+        "source": "com.MasterSolutions.appeludos.app-main-51:/layout/activity_register.xml"
+    },
+    {
+        "merged": "com.MasterSolutions.appeludos.app-mergeDebugResources-48:/layout/activity_create_pet.xml",
+        "source": "com.MasterSolutions.appeludos.app-main-51:/layout/activity_create_pet.xml"
+    }
+]

@@ -62,4 +62,16 @@
         android:padding="12dp"
         android:text="Actualizar" />
 
+    <!-- Botón de cerrar sesión -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogout"
+        style="@style/ButtonStyleClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@id/btn_refresh"
+        android:layout_margin="16dp"
+        android:padding="12dp"
+        android:text="Salir" />
+
 </RelativeLayout>
