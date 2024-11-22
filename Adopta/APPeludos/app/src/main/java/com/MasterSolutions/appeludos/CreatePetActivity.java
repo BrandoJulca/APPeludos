@@ -97,8 +97,8 @@ public class CreatePetActivity extends AppCompatActivity {
     private void setupSpinners() {
         // Especie
         ArrayAdapter<String> especieAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, new String[]{
-                "Perro", "Gato", "Conejo", "Pájaro", "Hamster",
-                "Tortuga", "Pez", "Iguana", "Caballo", "Otro"
+                "Perro", "Gato", "Conejo", "Ave", "Hamster",
+                "Tortuga", "Pez", "Iguana", "Ajolote", "Quién sabe"
         });
         especieAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         especieChooser.setAdapter(especieAdapter);

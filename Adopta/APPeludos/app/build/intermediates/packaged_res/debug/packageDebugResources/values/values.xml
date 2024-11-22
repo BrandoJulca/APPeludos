@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="azul">#162BE7</color>
+    <color name="blanco">#FFFFFFFF</color>
+    <color name="green_pet">#3DC1A8</color>
+    <color name="morado">#6750A4</color>
+    <color name="naranja">#ED4C41</color>
+    <color name="negro">#FF000000</color>
+    <string name="Entrar">Ingresa con Google</string>
+    <string name="EntrarGoogle">Ingresa con Google</string>
+    <string name="Pass">Contraseña</string>
+    <string name="Registrar">Registrate con Google</string>
+    <string name="RegistrarGoogle">Registrate con Google</string>
+    <string name="SMS">SMS</string>
+    <string name="Salir">Salir</string>
+    <string name="Story">Hola, soy [Nombre], un(a)
+        [Especie] de [Edad] [Años/Meses].
+        Soy de tamaño [Tamaño], peso [Peso] [kg/g]
+        y tengo un carácter [Carácter].
+        Me encuentro en [Ubicación].</string>
+    <string name="Usuario">Usuario</string>
+    <string name="Whatsapp">Whatsapp</string>
+    <string name="app_name">Appeludo</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="examplepass">*****</string>
+    <string name="exampleuser">Juan123</string>
+    <string name="gcm_defaultSenderId" translatable="false">1024603741541</string>
+    <string name="google_api_key" translatable="false">AIzaSyAMDzJc7ZHo85NZnTKjEXYQ0H6ImjabyeU</string>
+    <string name="google_app_id" translatable="false">1:1024603741541:android:a54c313f86d8d430b2158c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAMDzJc7ZHo85NZnTKjEXYQ0H6ImjabyeU</string>
+    <string name="google_storage_bucket" translatable="false">appeludos-16bb3.firebasestorage.app</string>
+    <string name="project_id" translatable="false">appeludos-16bb3</string>
+    <string name="tituloAplicacion">Adoptame</string>
+    <style name="Base.Theme.APPeludos" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+    <style name="BlackBox" parent="">
+        <item name="android:background">@color/negro</item> 
+    </style>
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button</item> 
+        <item name="android:textColor">@color/blanco</item> 
+        <item name="android:textSize">18sp</item> 
+        <item name="android:padding">12dp</item> 
+    </style>
+    <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textColor">@color/green_pet</item>
+    </style>
+    <style name="Theme.APPeludos" parent="Base.Theme.APPeludos"/>
+    <style name="WhiteBox" parent="">
+        <item name="android:background">@color/blanco</item> 
+    </style>
+</resources>
